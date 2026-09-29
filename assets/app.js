@@ -1,32 +1,36 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".nav-links");
-  const drop = document.querySelector(".drop");
-  const dropBtn = document.querySelector(".drop-btn");
+  const drops = document.querySelectorAll(".drop");
+  const dropButtons = document.querySelectorAll(".drop-btn");
 
-  if (menuToggle) {
+  if (menuToggle && nav) {
     menuToggle.addEventListener("click", () => {
       nav.classList.toggle("active");
       menuToggle.setAttribute("aria-expanded", nav.classList.contains("active"));
     });
   }
 
-  if (dropBtn) {
-    dropBtn.addEventListener("click", (e) => {
+  dropButtons.forEach((button, index) => {
+    button.addEventListener("click", (e) => {
       e.stopPropagation();
-      drop.classList.toggle("open");
+      drops.forEach((drop, i) => {
+        if (i !== index) drop.classList.remove("open");
+      });
+      drops[index].classList.toggle("open");
     });
-  }
+  });
 
   document.addEventListener("click", (e) => {
-    if (drop && !drop.contains(e.target)) drop.classList.remove("open");
+    drops.forEach(drop => {
+      if (!drop.contains(e.target)) drop.classList.remove("open");
+    });
   });
 
   document.querySelectorAll(".nav-links a").forEach(a => {
     a.addEventListener("click", () => {
       if (nav) nav.classList.remove("active");
-      if (drop) drop.classList.remove("open");
+      drops.forEach(drop => drop.classList.remove("open"));
     });
   });
 
@@ -44,8 +48,19 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", e => {
       e.preventDefault();
       notice.style.display = "block";
-      notice.textContent = "Gracias. La solicitud de demostración quedó preparada como mensaje de contacto.";
+      notice.textContent = "Gracias. Hemos recibido tu solicitud de contacto. En una versión conectada, este formulario enviaría la solicitud a recepción.";
       form.reset();
+    });
+  }
+
+  const appointmentForm = document.querySelector("#appointmentForm");
+  const appointmentNotice = document.querySelector("#appointmentNotice");
+  if (appointmentForm && appointmentNotice) {
+    appointmentForm.addEventListener("submit", e => {
+      e.preventDefault();
+      appointmentNotice.style.display = "block";
+      appointmentNotice.textContent = "Solicitud preparada. Esta demostración no realiza una reserva real; en una versión conectada, la solicitud llegaría a recepción.";
+      appointmentForm.reset();
     });
   }
 });

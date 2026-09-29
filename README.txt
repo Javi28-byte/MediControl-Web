@@ -1,19 +1,34 @@
-# MediControl — sitio web corporativo
+MEDICONTROL — SITIO WEB DE LA CLÍNICA
+========================================
 
-Sitio estático multipágina inspirado en la identidad visual de MediControl.
+Esta versión del proyecto cambia el propósito de la página web:
+ya no promociona el software MediControl; funciona como un sitio público
+orientado a pacientes para presentar la Clínica MediControl.
 
-## Estructura
-- index.html — portada
-- propuesta.html — propuesta y problema que resuelve
-- funcionalidades.html — capacidades principales
-- experiencia.html — flujo de atención
-- tecnologia.html — stack y enfoque técnico
-- contacto.html — formulario interactivo
-- assets/styles.css — estilos
-- assets/app.js — menú desplegable, menú móvil, animaciones y formulario
-- assets/logo.png — logo proporcionado
+Incluye:
+- Inicio orientado al paciente
+- Especialidades médicas
+- Servicios
+- Equipo médico por especialidad
+- Información de la clínica
+- Horarios y ubicación
+- Solicitud demostrativa de citas
+- Contacto
+- Menú desplegable animado
+- Navegación multipágina
+- Diseño responsive
+- Logo local y fotografías externas de Unsplash
 
-## Importante
-Las fotografías de las páginas se cargan desde Unsplash mediante URL. Si el proyecto se ejecutará sin internet, sustitúyelas por imágenes locales y conserva los textos ALT.
+Especialidades tomadas de los datos del proyecto:
+1. Medicina General
+2. Pediatría
+3. Cardiología
+4. Dermatología
+5. Ginecología
 
-El formulario es demostrativo: actualmente muestra una confirmación en pantalla y no envía datos a un servidor.
+IMPORTANTE:
+Los teléfonos, correo, horarios y ubicación mostrados en algunas páginas
+son datos demostrativos y deben sustituirse por los definitivos si el
+docente solicita información real de la clínica.
+
+Los formularios son demostrativos y no envían información a un servidor.

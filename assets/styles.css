@@ -25,7 +25,7 @@ body{
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 button,input,textarea{font:inherit}
-.container{width:min(1160px,92%);margin:auto;}
+.container{width:min(1160px,92%);margin:auto}
 .topbar{
   background:var(--navy);
   color:#dcebf5;
@@ -40,7 +40,7 @@ button,input,textarea{font:inherit}
   border-bottom:1px solid rgba(220,232,239,.8);
 }
 .nav-inner{height:82px;display:flex;align-items:center;justify-content:space-between;gap:30px}
-.brand img{width:125px;height: 75px;}
+.brand img{width:168px;height:auto}
 .nav-links{display:flex;align-items:center;gap:7px;list-style:none}
 .nav-links>li>a,.drop-btn{
   display:flex;align-items:center;gap:7px;
@@ -78,9 +78,9 @@ button,input,textarea{font:inherit}
 }
 .hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:60px;align-items:center;padding:72px 0}
 .eyebrow{display:inline-flex;gap:8px;align-items:center;background:#e5f7fb;color:#087e9b;border:1px solid #c9edf4;border-radius:999px;padding:7px 12px;font-size:.82rem;font-weight:750;text-transform:uppercase;letter-spacing:.05em}
-.hero h1{font-size:clamp(2.7rem,5vw,5.2rem);line-height:1.03;letter-spacing:-.055em;margin:18px 0;color:var(--navy);}
+.hero h1{font-size:clamp(2.7rem,5vw,5.2rem);line-height:1.03;letter-spacing:-.055em;margin:18px 0;color:var(--navy)}
 .hero h1 span{color:var(--cyan)}
-.hero p.lead{font-size:1.12rem;color:#587083;max-width:650px; text-align: justify;}
+.hero p.lead{font-size:1.12rem;color:#587083;max-width:650px}
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:9px;
@@ -157,7 +157,7 @@ button,input,textarea{font:inherit}
 .footer p{max-width:360px}
 .footer ul{list-style:none;display:grid;gap:8px}
 .footer a:hover{color:#fff}
-.footer-logo{width:155px;margin-bottom:14px}
+.footer-logo{width:155px;filter:brightness(0) invert(1);opacity:.95;margin-bottom:14px}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:17px 0;display:flex;justify-content:space-between;gap:20px;font-size:.84rem}
 .reveal{opacity:0;transform:translateY(18px);transition:.7s ease}
 .reveal.show{opacity:1;transform:none}
@@ -181,3 +181,36 @@ button,input,textarea{font:inherit}
   .field.full{grid-column:auto}.image-banner img{height:280px}.image-banner .copy{padding:32px}
   .feature-image img{height:330px}.footer-main{grid-template-columns:1fr}.footer-bottom{flex-direction:column}
 }
+
+
+/* --- MediControl Clínica: components --- */
+.specialty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.specialty-card{position:relative;overflow:hidden}
+.specialty-card .specialty-tag{display:inline-flex;padding:6px 10px;border-radius:999px;background:#e8f7fb;color:#087e9b;font-size:.78rem;font-weight:800;margin-bottom:15px}
+.specialty-card h3{font-size:1.25rem}
+.specialty-card p{margin-bottom:18px}
+.specialty-link{font-weight:800;color:#087e9b}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.info-box{background:#f4f9fb;border:1px solid var(--line);border-radius:20px;padding:24px}
+.info-box strong{display:block;color:var(--navy);font-size:1.05rem;margin-bottom:7px}
+.doctor-card{display:grid;grid-template-columns:90px 1fr;gap:20px;align-items:center}
+.doctor-avatar{width:90px;height:90px;border-radius:22px;overflow:hidden;background:#dff4f8}
+.doctor-avatar img{width:100%;height:100%;object-fit:cover}
+.service-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.service-item{display:flex;gap:12px;align-items:flex-start;padding:17px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.service-item .check{flex:none}
+.cta-strip{background:linear-gradient(135deg,#0a2f4b,#0a7891);border-radius:26px;padding:40px;color:#fff;display:flex;justify-content:space-between;gap:30px;align-items:center}
+.cta-strip h2{font-size:2rem;line-height:1.1;margin-bottom:9px}
+.cta-strip p{color:#d5edf2;max-width:650px}
+.contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:30px}
+.contact-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px}
+.contact-card .card-icon{margin-bottom:14px}
+.hours{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.hours th,.hours td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left}
+.hours th{color:var(--navy);background:#f2f8fa}
+.hours tr:last-child td{border-bottom:0}
+.patient-note{border-left:4px solid var(--cyan);background:#eff9fb;padding:18px 20px;border-radius:0 15px 15px 0;color:#36576a}
+.hero-badges{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.hero-badge{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);color:#e4f7fb;font-size:.84rem}
+@media(max-width:900px){.specialty-grid,.info-grid,.contact-cards{grid-template-columns:1fr 1fr}.service-list{grid-template-columns:1fr}.cta-strip{flex-direction:column;align-items:flex-start}}
+@media(max-width:600px){.specialty-grid,.info-grid,.contact-cards{grid-template-columns:1fr}.doctor-card{grid-template-columns:1fr}.doctor-avatar{width:76px;height:76px}}

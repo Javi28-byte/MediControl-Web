@@ -4,11 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Inicio | MediControl</title>
-<meta name="description" content="MediControl — propuesta de gestión integral para clínicas.">
+<meta name="description" content="Clínica MediControl: especialidades, servicios y atención médica para pacientes.">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
+
 <header>
+  <div class="topbar"><div class="container"><span>Tu salud, acompañada por profesionales</span><span>Clínica MediControl</span></div></div>
   <nav class="navbar">
     <div class="container nav-inner">
       <a class="brand" href="index.html" aria-label="MediControl inicio"><img src="assets/logo.png" alt="MediControl"></a>
@@ -16,38 +18,48 @@
       <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li class="drop">
-          <button class="drop-btn">Conoce MediControl <span class="chevron">⌄</span></button>
+          <button class="drop-btn">Atención médica <span class="chevron">⌄</span></button>
           <div class="dropdown">
-            <a href="propuesta.html">La propuesta <small>Qué busca resolver</small></a>
-            <a href="funcionalidades.html">Funcionalidades <small>Capacidades principales</small></a>
-            <a href="experiencia.html">Experiencia de atención <small>Un recorrido sencillo</small></a>
+            <a href="especialidades.html">Especialidades <small>Conoce nuestras áreas médicas</small></a>
+            <a href="servicios.html">Servicios <small>Lo que puedes encontrar en la clínica</small></a>
+            <a href="medicos.html">Equipo médico <small>Profesionales y especialidades</small></a>
           </div>
         </li>
-        <li><a href="tecnologia.html">Tecnología</a></li>
-        <li><a href="contacto.html" class="nav-cta">Solicitar demostración</a></li>
+        <li class="drop">
+          <button class="drop-btn">La clínica <span class="chevron">⌄</span></button>
+          <div class="dropdown">
+            <a href="nosotros.html">Conócenos <small>Nuestra forma de atender</small></a>
+            <a href="horarios.html">Horarios y ubicación <small>Cuándo y dónde encontrarnos</small></a>
+          </div>
+        </li>
+        <li><a href="citas.html" class="nav-cta">Agendar cita</a></li>
       </ul>
     </div>
   </nav>
 </header>
 
 <main>
+
 <section class="hero">
  <div class="container hero-grid">
   <div class="reveal">
-   <span class="eyebrow">Gestión clínica · MediControl</span>
-   <h1>La información de una clínica, <span>mejor conectada.</span></h1>
-   <p class="lead">MediControl nace como una propuesta de gestión integral para centralizar pacientes, citas, consultas, recetas y reportes, reduciendo pasos innecesarios y haciendo más clara la operación diaria.</p>
+   <span class="eyebrow">Clínica MediControl · Atención médica</span>
+   <h1>Tu salud merece una atención <span>cercana y profesional.</span></h1>
+   <p class="lead">En Clínica MediControl encontrarás atención médica en diferentes especialidades, profesionales de salud y un espacio pensado para acompañarte en cada consulta.</p>
    <div class="actions">
-    <a class="btn btn-primary" href="propuesta.html">Conocer la propuesta →</a>
-    <a class="btn btn-secondary" href="experiencia.html">Ver experiencia de atención</a>
+    <a class="btn btn-primary" href="citas.html">Agendar una cita →</a>
+    <a class="btn btn-secondary" href="especialidades.html">Ver especialidades</a>
+   </div>
+   <div class="hero-badges">
+    <span class="hero-badge">Medicina General</span><span class="hero-badge">Pediatría</span><span class="hero-badge">Cardiología</span><span class="hero-badge">Dermatología</span><span class="hero-badge">Ginecología</span>
    </div>
   </div>
   <div class="hero-visual reveal">
    <div class="hero-card">
-    <img class="hero-photo" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85" alt="Profesional de salud utilizando tecnología">
+    <img class="hero-photo" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85" alt="Profesional de salud atendiendo a un paciente">
    </div>
-   <div class="floating float-one"><div class="float-icon">✓</div><div><strong>Procesos conectados</strong><br><small>Menos información dispersa</small></div></div>
-   <div class="floating float-two"><div class="float-icon">+</div><div><strong>Atención organizada</strong><br><small>Información a mano</small></div></div>
+   <div class="floating float-one"><div class="float-icon">✓</div><div><strong>Atención integral</strong><br><small>Distintas especialidades</small></div></div>
+   <div class="floating float-two"><div class="float-icon">+</div><div><strong>Para ti y tu familia</strong><br><small>Atención centrada en el paciente</small></div></div>
   </div>
  </div>
 </section>
@@ -55,13 +67,13 @@
 <section class="section">
  <div class="container">
   <div class="section-head reveal">
-   <div><span class="eyebrow">¿Por qué MediControl?</span><h2>Una experiencia pensada alrededor de las personas.</h2></div>
-   <p>No busca convertir la clínica en una pantalla más. La idea es que la tecnología quite fricción del trabajo cotidiano y deje la información más clara.</p>
+   <div><span class="eyebrow">Lo que encontrarás</span><h2>Todo lo que necesitas antes de visitar la clínica.</h2></div>
+   <p>La web está pensada para que un paciente pueda conocer la clínica, identificar la especialidad que necesita, revisar los servicios disponibles y solicitar una cita.</p>
   </div>
   <div class="grid-3">
-   <article class="card reveal"><div class="card-icon">01</div><h3>Información centralizada</h3><p>Pacientes, médicos, citas, consultas y recetas organizados dentro de una misma propuesta.</p></article>
-   <article class="card reveal"><div class="card-icon">02</div><h3>Menos errores</h3><p>Validaciones y búsquedas ayudan a evitar duplicados, datos incompletos y conflictos de horarios.</p></article>
-   <article class="card reveal"><div class="card-icon">03</div><h3>Documentos útiles</h3><p>La propuesta contempla fichas, recetas, comprobantes y reportes para que la información pueda salir del sistema de forma ordenada.</p></article>
+   <article class="card reveal"><div class="card-icon">01</div><h3>Especialidades médicas</h3><p>Conoce las cinco áreas médicas contempladas en Clínica MediControl y descubre qué tipo de atención ofrece cada una.</p><a class="specialty-link" href="especialidades.html">Ver especialidades →</a></article>
+   <article class="card reveal"><div class="card-icon">02</div><h3>Servicios para pacientes</h3><p>Consulta general, seguimiento médico, atención especializada y orientación para programar tu visita.</p><a class="specialty-link" href="servicios.html">Conocer servicios →</a></article>
+   <article class="card reveal"><div class="card-icon">03</div><h3>Citas y contacto</h3><p>Encuentra la información necesaria para solicitar una cita y comunicarte con la clínica.</p><a class="specialty-link" href="citas.html">Solicitar cita →</a></article>
   </div>
  </div>
 </section>
@@ -69,10 +81,10 @@
 <section class="stats">
  <div class="container section">
   <div class="stats-grid">
-   <div class="stat reveal"><strong>3</strong><span>roles principales: administrador, recepcionista y médico</span></div>
-   <div class="stat reveal"><strong>6+</strong><span>áreas de información clínica y administrativa</span></div>
-   <div class="stat reveal"><strong>PDF</strong><span>documentos generados para procesos frecuentes</span></div>
-   <div class="stat reveal"><strong>Excel</strong><span>salida de información para reportes y análisis</span></div>
+   <div class="stat reveal"><strong>5</strong><span>especialidades médicas disponibles</span></div>
+   <div class="stat reveal"><strong>1</strong><span>lugar para consultar distintas áreas de salud</span></div>
+   <div class="stat reveal"><strong>24/7</strong><span>información de la clínica disponible desde la web</span></div>
+   <div class="stat reveal"><strong>100%</strong><span>enfoque en la experiencia del paciente</span></div>
   </div>
  </div>
 </section>
@@ -80,54 +92,66 @@
 <section class="section">
  <div class="container">
   <div class="image-banner reveal">
-   <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1200&q=85" alt="Espacio moderno de atención médica">
+   <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1200&q=85" alt="Interior moderno de una clínica">
    <div class="copy">
-    <span class="eyebrow">Más que un sistema</span>
-    <h2>Una propuesta digital para una clínica más organizada.</h2>
-    <p>MediControl combina gestión, validaciones y generación de documentos con una interfaz enfocada en que cada rol encuentre lo que necesita sin complicaciones.</p>
-    <div class="actions"><a class="btn btn-secondary" href="funcionalidades.html">Explorar funcionalidades →</a></div>
+    <span class="eyebrow">Una clínica pensada para ti</span>
+    <h2>Conoce dónde recibirás tu atención.</h2>
+    <p>Consulta nuestras áreas médicas, conoce el proceso para agendar una cita y encuentra los datos de contacto de Clínica MediControl.</p>
+    <div class="actions"><a class="btn btn-secondary" href="nosotros.html">Conocer la clínica →</a></div>
    </div>
   </div>
  </div>
 </section>
+
+<section class="section">
+ <div class="container">
+  <div class="cta-strip reveal">
+   <div><h2>¿Necesitas una consulta?</h2><p>Elige la especialidad que buscas y prepara tu solicitud de cita.</p></div>
+   <a class="btn btn-primary" href="citas.html">Agendar cita →</a>
+  </div>
+ </div>
+</section>
+
 </main>
 
 <footer class="footer">
   <div class="container footer-main">
     <div>
       <img class="footer-logo" src="assets/logo.png" alt="MediControl">
-      <p>Una propuesta de gestión clínica pensada para organizar información, simplificar procesos y acompañar mejor el trabajo del personal.</p>
+      <p>Clínica MediControl: atención médica cercana, profesional y organizada para cuidar de ti y de tu familia.</p>
+    </div>
+    <div>
+      <h3>Atención médica</h3>
+      <ul>
+        <li><a href="especialidades.html">Especialidades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="medicos.html">Equipo médico</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Pacientes</h3>
+      <ul>
+        <li><a href="citas.html">Agendar cita</a></li>
+        <li><a href="horarios.html">Horarios y ubicación</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
     </div>
     <div>
       <h3>MediControl</h3>
       <ul>
-        <li><a href="propuesta.html">La propuesta</a></li>
-        <li><a href="funcionalidades.html">Funcionalidades</a></li>
-        <li><a href="experiencia.html">Experiencia</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>Información</h3>
-      <ul>
-        <li><a href="tecnologia.html">Tecnología</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="index.html">Inicio</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>Enfoque</h3>
-      <ul>
-        <li>Organización</li>
-        <li>Seguridad</li>
-        <li>Experiencia de usuario</li>
-        <li>Información centralizada</li>
+        <li><a href="nosotros.html">Conócenos</a></li>
+        <li>Atención humana</li>
+        <li>Profesionales de salud</li>
+        <li>Bienestar del paciente</li>
       </ul>
     </div>
   </div>
   <div class="container footer-bottom">
     <span>© 2026 MediControl. Todos los derechos reservados.</span>
-    <span>Proyecto académico · MediControl</span>
+    <span>Clínica MediControl · Sitio web informativo</span>
   </div>
 </footer>
+
 <script src="assets/app.js"></script>
-</body></html>
+</body>
+</html>
