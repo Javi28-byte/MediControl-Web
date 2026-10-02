@@ -40,7 +40,7 @@ button,input,textarea{font:inherit}
   border-bottom:1px solid rgba(220,232,239,.8);
 }
 .nav-inner{height:82px;display:flex;align-items:center;justify-content:space-between;gap:30px}
-.brand img{width:168px;height:auto}
+.brand img{width:100px;height:75}
 .nav-links{display:flex;align-items:center;gap:7px;list-style:none}
 .nav-links>li>a,.drop-btn{
   display:flex;align-items:center;gap:7px;
@@ -157,7 +157,7 @@ button,input,textarea{font:inherit}
 .footer p{max-width:360px}
 .footer ul{list-style:none;display:grid;gap:8px}
 .footer a:hover{color:#fff}
-.footer-logo{width:155px;filter:brightness(0) invert(1);opacity:.95;margin-bottom:14px}
+.footer-logo{width:155px; margin-bottom:14px}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:17px 0;display:flex;justify-content:space-between;gap:20px;font-size:.84rem}
 .reveal{opacity:0;transform:translateY(18px);transition:.7s ease}
 .reveal.show{opacity:1;transform:none}
