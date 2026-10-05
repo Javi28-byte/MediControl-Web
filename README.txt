@@ -1,34 +1,31 @@
 MEDICONTROL — SITIO WEB DE LA CLÍNICA
 ========================================
 
-Esta versión del proyecto cambia el propósito de la página web:
-ya no promociona el software MediControl; funciona como un sitio público
-orientado a pacientes para presentar la Clínica MediControl.
+Versión final orientada a pacientes de Clínica MediControl.
 
 Incluye:
 - Inicio orientado al paciente
-- Especialidades médicas
+- Especialidades médicas integradas con profesionales
 - Servicios
-- Equipo médico por especialidad
 - Información de la clínica
 - Horarios y ubicación
-- Solicitud demostrativa de citas
+- Solicitud y registro local de citas
+- Comprobante descargable de la solicitud de cita
 - Contacto
-- Menú desplegable animado
+- Testimonios y elementos de confianza
+- Menú responsive para escritorio, tablet y teléfono
 - Navegación multipágina
-- Diseño responsive
 - Logo local y fotografías externas de Unsplash
 
-Especialidades tomadas de los datos del proyecto:
+Especialidades:
 1. Medicina General
 2. Pediatría
 3. Cardiología
 4. Dermatología
 5. Ginecología
 
-IMPORTANTE:
-Los teléfonos, correo, horarios y ubicación mostrados en algunas páginas
-son datos demostrativos y deben sustituirse por los definitivos si el
-docente solicita información real de la clínica.
+NOTA TÉCNICA SOBRE LAS CITAS
+----------------------------
+El sitio está preparado para GitHub Pages, por lo que no dispone de un servidor propio para recibir formularios. Las solicitudes de cita se almacenan en el almacenamiento local del navegador que las registra y se puede descargar un comprobante al finalizar. Para centralizar las citas de todos los pacientes en una sola bandeja o base de datos sería necesario conectar posteriormente un backend, Google Sheets, un servicio de formularios o una API.
 
-Los formularios son demostrativos y no envían información a un servidor.
+Las fotografías de profesionales son imágenes de referencia y no representan identidades reales del personal de la clínica.

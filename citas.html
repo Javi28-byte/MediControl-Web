@@ -8,108 +8,60 @@
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-
 <header>
-  <div class="topbar"><div class="container"><span>Tu salud, acompañada por profesionales</span><span>Clínica MediControl</span></div></div>
   <nav class="navbar">
     <div class="container nav-inner">
       <a class="brand" href="index.html" aria-label="MediControl inicio"><img src="assets/logo.png" alt="MediControl"></a>
       <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
       <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
-        <li class="drop">
-          <button class="drop-btn">Atención médica <span class="chevron">⌄</span></button>
-          <div class="dropdown">
-            <a href="especialidades.html">Especialidades <small>Conoce nuestras áreas médicas</small></a>
-            <a href="servicios.html">Servicios <small>Lo que puedes encontrar en la clínica</small></a>
-            <a href="medicos.html">Equipo médico <small>Profesionales y especialidades</small></a>
-          </div>
-        </li>
-        <li class="drop">
-          <button class="drop-btn">La clínica <span class="chevron">⌄</span></button>
-          <div class="dropdown">
-            <a href="nosotros.html">Conócenos <small>Nuestra forma de atender</small></a>
-            <a href="horarios.html">Horarios y ubicación <small>Cuándo y dónde encontrarnos</small></a>
-          </div>
-        </li>
+        <li class="drop"><button class="drop-btn">Atención médica <span class="chevron">⌄</span></button><div class="dropdown"><a href="especialidades.html">Especialidades <small>Áreas médicas y profesionales</small></a><a href="servicios.html">Servicios <small>Atención para nuestros pacientes</small></a></div></li>
+        <li class="drop"><button class="drop-btn">La clínica <span class="chevron">⌄</span></button><div class="dropdown"><a href="nosotros.html">Conócenos <small>Nuestra forma de atender</small></a><a href="horarios.html">Horarios y ubicación <small>Cuándo y dónde encontrarnos</small></a></div></li>
         <li><a href="citas.html" class="nav-cta">Agendar cita</a></li>
       </ul>
     </div>
   </nav>
 </header>
-
 <main>
-
-<section class="page-hero">
- <div class="container">
-  <span class="breadcrumb">MediControl / Pacientes</span>
-  <h1>Agenda tu cita</h1>
-  <p>Cuéntanos qué atención estás buscando. Este formulario es demostrativo para el proyecto académico.</p>
- </div>
-</section>
+<section class="page-hero"><div class="container"><span class="breadcrumb">MediControl / Pacientes</span><h1>Agenda tu cita</h1><p>Completa tus datos, selecciona la especialidad y el horario que prefieras.</p></div></section>
 <section class="section">
  <div class="container">
-  <div class="form-card reveal">
-   <form id="appointmentForm">
-    <div class="form-grid">
-     <div class="field"><label for="name">Nombre completo</label><input id="name" required></div>
-     <div class="field"><label for="phone">Teléfono</label><input id="phone" type="tel" required></div>
-     <div class="field"><label for="email">Correo electrónico</label><input id="email" type="email" required></div>
-     <div class="field"><label for="specialty">Especialidad</label><select id="specialty" required><option value="">Selecciona una</option><option>Medicina General</option><option>Pediatría</option><option>Cardiología</option><option>Dermatología</option><option>Ginecología</option></select></div>
-     <div class="field"><label for="date">Fecha preferida</label><input id="date" type="date" required></div>
-     <div class="field"><label for="time">Horario preferido</label><input id="time" type="time" required></div>
-     <div class="field full"><label for="reason">Motivo de la consulta</label><textarea id="reason" placeholder="Cuéntanos brevemente qué necesitas..." required></textarea></div>
-     <div class="field full"><button class="btn btn-primary" type="submit">Enviar solicitud de cita →</button></div>
-    </div>
-    <div class="notice" id="appointmentNotice"></div>
-   </form>
+  <div class="appointment-layout">
+   <div class="appointment-intro reveal">
+    <span class="eyebrow">Solicitud de cita</span><h2>Cuéntanos cuándo quieres visitarnos.</h2>
+    <p>Tu solicitud quedará registrada en este dispositivo y podrás descargar un comprobante con los datos enviados.</p>
+    <ul class="list"><li><span class="check">✓</span><span>Selecciona la especialidad que necesitas.</span></li><li><span class="check">✓</span><span>Indica una fecha y horario de preferencia.</span></li><li><span class="check">✓</span><span>Revisa los datos antes de enviar la solicitud.</span></li></ul>
+   </div>
+   <div class="form-card reveal">
+    <form id="appointmentForm">
+     <div class="form-grid">
+      <div class="field"><label for="name">Nombre completo</label><input id="name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="phone">Teléfono</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+      <div class="field"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="specialty">Especialidad</label><select id="specialty" name="specialty" required><option value="">Selecciona una</option><option>Medicina General</option><option>Pediatría</option><option>Cardiología</option><option>Dermatología</option><option>Ginecología</option></select></div>
+      <div class="field"><label for="date">Fecha preferida</label><input id="date" name="date" type="date" required></div>
+      <div class="field"><label for="time">Horario preferido</label><input id="time" name="time" type="time" required></div>
+      <div class="field full"><label for="reason">Motivo de la consulta</label><textarea id="reason" name="reason" placeholder="Cuéntanos brevemente qué necesitas..." required></textarea></div>
+      <div class="field full"><button class="btn btn-primary" type="submit">Registrar solicitud de cita →</button></div>
+     </div>
+     <div class="notice" id="appointmentNotice" role="status"></div>
+     <div class="appointment-actions" id="appointmentActions" hidden><button class="btn btn-secondary" type="button" id="downloadAppointment">Descargar comprobante</button></div>
+    </form>
+   </div>
   </div>
  </div>
 </section>
-<section class="section">
- <div class="container"><div class="patient-note reveal"><strong>Importante:</strong> Si presentas una emergencia médica, no utilices este formulario como sustituto de atención inmediata. Busca servicios de emergencia.</div></div>
-</section>
-
+<section class="section compact-section"><div class="container"><div class="patient-note reveal"><strong>Importante:</strong> Si presentas una emergencia médica, no utilices este formulario como sustituto de atención inmediata. Busca servicios de emergencia.</div></div></section>
 </main>
-
 <footer class="footer">
   <div class="container footer-main">
-    <div>
-      <img class="footer-logo" src="assets/logo.png" alt="MediControl">
-      <p>Clínica MediControl: atención médica cercana, profesional y organizada para cuidar de ti y de tu familia.</p>
-    </div>
-    <div>
-      <h3>Atención médica</h3>
-      <ul>
-        <li><a href="especialidades.html">Especialidades</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="medicos.html">Equipo médico</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>Pacientes</h3>
-      <ul>
-        <li><a href="citas.html">Agendar cita</a></li>
-        <li><a href="horarios.html">Horarios y ubicación</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>MediControl</h3>
-      <ul>
-        <li><a href="nosotros.html">Conócenos</a></li>
-        <li>Atención humana</li>
-        <li>Profesionales de salud</li>
-        <li>Bienestar del paciente</li>
-      </ul>
-    </div>
+    <div><img class="footer-logo" src="assets/logo.png" alt="MediControl"></div>
+    <div><h3>Atención médica</h3><ul><li><a href="especialidades.html">Especialidades</a></li><li><a href="servicios.html">Servicios</a></li></ul></div>
+    <div><h3>Pacientes</h3><ul><li><a href="citas.html">Agendar cita</a></li><li><a href="horarios.html">Horarios y ubicación</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+    <div><h3>MediControl</h3><ul><li><a href="nosotros.html">Conócenos</a></li><li>Atención humana</li><li>Profesionales de salud</li></ul></div>
   </div>
-  <div class="container footer-bottom">
-    <span>© 2026 MediControl. Todos los derechos reservados.</span>
-    <span>Clínica MediControl · Sitio web informativo</span>
-  </div>
+  <div class="container footer-bottom"><span>© 2026 MediControl. Todos los derechos reservados.</span><span>Clínica MediControl</span></div>
 </footer>
-
 <script src="assets/app.js"></script>
 </body>
 </html>
