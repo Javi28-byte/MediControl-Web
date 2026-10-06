@@ -281,7 +281,7 @@ button, input, select, textarea { font: inherit; }
   .container { width: min(100% - 28px, 680px); }
   .navbar { position: sticky; }
   .nav-inner { height: 70px; }
-  .brand img { width: 145px; height: auto; }
+  .brand img { width: 110px; height: 65px; }
   .menu-toggle { display: block; }
   .nav-links { top: 70px; left: 14px; right: 14px; width: auto; max-height: calc(100vh - 84px); overflow-y: auto; }
   .nav-links > li { width: 100%; }
